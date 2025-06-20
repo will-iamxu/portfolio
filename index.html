@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Xu - Developer Console</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="console-container">
+        <div class="console-header">
+            <div class="console-title">William Xu - Developer Console</div>
+            <div class="console-version">v1.0.0</div>
+        </div>
+        
+        <div class="console-output" id="output">
+            <div class="startup-sequence">
+                <div class="startup-line">Loading developer portfolio...</div>
+                <div class="startup-line">Initializing command interface...</div>
+                <div class="startup-line">Ready for input.</div>
+                <div class="startup-line"></div>
+                <div class="startup-line welcome">Welcome to William Xu's Portfolio Console!</div>
+                <div class="startup-line">Type 'help' to see available commands.</div>
+                <div class="startup-line"></div>
+            </div>
+        </div>
+        
+        <div class="console-input-container">
+            <span class="console-prompt">]</span>
+            <input type="text" id="commandInput" class="console-input" placeholder="Enter command..." autocomplete="off" spellcheck="false">
+        </div>
+        
+        <div class="console-footer">
+            <div class="footer-info">Press TAB for autocomplete | Type 'clear' to clear console</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
