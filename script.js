@@ -27,7 +27,16 @@ class PortfolioConsole {
             'version': this.showVersion.bind(this),
             'github': this.openGithub.bind(this),
             'linkedin': this.openLinkedin.bind(this),
-            'resume': this.showResume.bind(this)
+            'resume': this.showResume.bind(this),
+            'clips': this.openClips.bind(this),
+            'noclip': this.noclip.bind(this),
+            'sv_cheats': this.svCheats.bind(this),
+            'bind': this.bindCommand.bind(this),
+            'fps_max': this.fpsMax.bind(this),
+            'net_graph': this.netGraph.bind(this),
+            'quit': this.quit.bind(this),
+            'disconnect': this.disconnect.bind(this),
+            'status': this.serverStatus.bind(this)
         };
         
         this.startTime = Date.now();
@@ -272,6 +281,34 @@ class PortfolioConsole {
             <div class="help-command">
                 <span class="help-command-name">version</span>
                 <span class="help-command-desc">Show portfolio version</span>
+            </div>
+            <div class="help-command">
+                <span class="help-command-name">clips</span>
+                <span class="help-command-desc">Open CS2 clips channel</span>
+            </div>
+            <div class="help-command">
+                <span class="help-command-name">noclip</span>
+                <span class="help-command-desc">Toggle noclip mode (for fun)</span>
+            </div>
+            <div class="help-command">
+                <span class="help-command-name">sv_cheats</span>
+                <span class="help-command-desc">Enable/disable cheats</span>
+            </div>
+            <div class="help-command">
+                <span class="help-command-name">fps_max</span>
+                <span class="help-command-desc">Set maximum FPS</span>
+            </div>
+            <div class="help-command">
+                <span class="help-command-name">net_graph</span>
+                <span class="help-command-desc">Toggle network graph</span>
+            </div>
+            <div class="help-command">
+                <span class="help-command-name">status</span>
+                <span class="help-command-desc">Show server status</span>
+            </div>
+            <div class="help-command">
+                <span class="help-command-name">quit</span>
+                <span class="help-command-desc">Exit the console</span>
             </div>
         `;
         this.displayOutput(helpText);
@@ -523,6 +560,103 @@ class PortfolioConsole {
             "Innovation distinguishes between a leader and a follower."
         ];
         return quotes[Math.floor(Math.random() * quotes.length)];
+    }
+    
+    openClips() {
+        window.open('https://www.youtube.com/@rakcs2', '_blank');
+        this.displaySuccess('Opening CS2 clips channel...');
+    }
+    
+    noclip() {
+        const messages = [
+            'noclip mode enabled - you are now floating through the matrix',
+            'Warning: noclip activated. Reality collision disabled.',
+            'sv_cheats "1" required to enable noclip',
+            'noclip toggled - prepare for interdimensional travel'
+        ];
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        this.displayOutput(randomMessage, 'warning');
+        
+        setTimeout(() => {
+            this.displayOutput('Just kidding - this is a portfolio, not Source engine 😄', 'info');
+        }, 2000);
+    }
+    
+    svCheats(args) {
+        const value = args[0] || '0';
+        if (value === '1') {
+            this.displayOutput('sv_cheats set to 1 - cheats enabled', 'warning');
+            this.displayOutput('Achievement unlocked: Godmode activated in portfolio browsing', 'success');
+        } else {
+            this.displayOutput('sv_cheats set to 0 - cheats disabled', 'info');
+            this.displayOutput('Back to legitimate portfolio viewing', 'info');
+        }
+    }
+    
+    bindCommand(args) {
+        if (args.length === 0) {
+            this.displayOutput('Usage: bind [key] [command]', 'error');
+            this.displayOutput('Example: bind "f" "toggle flashlight"', 'info');
+            return;
+        }
+        
+        const key = args[0];
+        const command = args.slice(1).join(' ') || 'undefined';
+        this.displayOutput(`Bound "${key}" to "${command}"`, 'success');
+        this.displayOutput('Note: Keybinds only work in actual CS2, not in portfolios 😉', 'info');
+    }
+    
+    fpsMax(args) {
+        const fps = args[0] || '60';
+        this.displayOutput(`fps_max set to ${fps}`, 'success');
+        
+        if (parseInt(fps) > 300) {
+            this.displayOutput('Warning: Portfolio FPS capped at browser refresh rate', 'warning');
+        } else if (parseInt(fps) < 30) {
+            this.displayOutput('That\'s gonna be choppy...', 'warning');
+        }
+    }
+    
+    netGraph(args) {
+        const value = args[0] || '1';
+        if (value === '1') {
+            this.displayOutput('net_graph enabled', 'success');
+            this.displayOutput('Portfolio Stats: 0ms ping, 999fps, 0% loss, perfect connection to William\'s brain', 'info');
+        } else {
+            this.displayOutput('net_graph disabled', 'info');
+        }
+    }
+    
+    serverStatus() {
+        this.displayOutput('Portfolio Server Status:', 'info');
+        this.displayOutput('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'info');
+        this.displayOutput('Server: William\'s Portfolio v1.0.0', 'success');
+        this.displayOutput('Map: portfolio_terminal', 'info');
+        this.displayOutput('Players: 1/1 (you)', 'success');
+        this.displayOutput('Ping: <1ms (localhost)', 'success');
+        this.displayOutput('Tickrate: 128 (thoughts per second)', 'info');
+        this.displayOutput('Uptime: ' + Math.floor((Date.now() - this.startTime) / 1000) + 's', 'info');
+        this.displayOutput('Anti-cheat: Secured by good vibes', 'success');
+    }
+    
+    quit() {
+        this.displayOutput('Thanks for checking out my portfolio!', 'success');
+        this.displayOutput('Disconnecting from William\'s brain server...', 'info');
+        
+        setTimeout(() => {
+            this.displayOutput('Just kidding - you can\'t quit a portfolio that easily 😄', 'warning');
+            this.displayOutput('Try "contact" to actually reach out!', 'info');
+        }, 2000);
+    }
+    
+    disconnect() {
+        this.displayOutput('Disconnected from server', 'warning');
+        this.displayOutput('Reason: "Thanks for visiting!"', 'info');
+        
+        setTimeout(() => {
+            this.displayOutput('Auto-reconnecting to portfolio server...', 'info');
+            this.displayOutput('Connection established. Welcome back!', 'success');
+        }, 3000);
     }
 }
 
