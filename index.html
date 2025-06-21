@@ -12,24 +12,22 @@
 <body>
     <div class="console-container">
         <div class="console-header">
-            <div class="console-title">William Xu - Developer Console</div>
-            <div class="console-version">v1.0.0</div>
+            <div class="console-title">CONSOLE</div>
+            <button class="console-close" onclick="closeConsole()">&times;</button>
         </div>
         
         <div class="console-output" id="output">
             <div class="startup-sequence">
-                <div class="startup-line">Loading developer portfolio...</div>
-                <div class="startup-line">Initializing command interface...</div>
-                <div class="startup-line">Ready for input.</div>
-                <div class="startup-line"></div>
-                <div class="startup-line welcome">Welcome to William Xu's Portfolio Console!</div>
-                <div class="startup-line">Type 'help' to see available commands.</div>
+                <div class="startup-line">Loading william_xu.cfg...</div>
+                <div class="startup-line">Executing config file...</div>
+                <div class="startup-line">Host_WriteConfiguration: Wrote cfg/william_xu.cfg</div>
+                <div class="startup-line">Console initialized.</div>
                 <div class="startup-line"></div>
             </div>
         </div>
         
         <div class="console-input-container">
-            <span class="console-prompt">]</span>
+            <span class="console-prompt">&gt;</span>
             <input type="text" id="commandInput" class="console-input" placeholder="Enter command..." autocomplete="off" spellcheck="false">
         </div>
         

@@ -183,7 +183,7 @@ class PortfolioConsole {
         const commandElement = document.createElement('div');
         commandElement.className = 'command-line';
         commandElement.innerHTML = `
-            <span class="command-prompt">]</span>
+            <span class="command-prompt">&gt;</span>
             <span class="command-text">${command}</span>
         `;
         this.output.appendChild(commandElement);
@@ -316,12 +316,9 @@ class PortfolioConsole {
     
     showAbout() {
         const aboutText = `
-            <div class="ascii-art">
-    ╔══════════════════════════════════════════════════════════════════╗
-    ║                          WILLIAM XU                              ║
-    ║                    Computer Engineering Student                  ║
-    ╚══════════════════════════════════════════════════════════════════╝
-            </div>
+            <strong>WILLIAM XU</strong><br>
+            Computer Engineering Student<br><br>
+            
             <strong>About Me:</strong><br>
             Rising Senior in Computer Engineering at Texas A&M University<br>
             Passionate about systems that interface with the physical world<br><br>
@@ -620,23 +617,23 @@ class PortfolioConsole {
     netGraph(args) {
         const value = args[0] || '1';
         if (value === '1') {
-            this.displayOutput('net_graph enabled', 'success');
-            this.displayOutput('Portfolio Stats: 0ms ping, 999fps, 0% loss, perfect connection to William\'s brain', 'info');
+            this.displayOutput('[networking] net_graph enabled', 'networking');
+            this.displayOutput('[networking] Portfolio Stats: 0ms ping, 999fps, 0% loss, perfect connection to William\'s brain', 'networking');
         } else {
-            this.displayOutput('net_graph disabled', 'info');
+            this.displayOutput('[networking] net_graph disabled', 'networking');
         }
     }
     
     serverStatus() {
-        this.displayOutput('Portfolio Server Status:', 'info');
-        this.displayOutput('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'info');
-        this.displayOutput('Server: William\'s Portfolio v1.0.0', 'success');
-        this.displayOutput('Map: portfolio_terminal', 'info');
-        this.displayOutput('Players: 1/1 (you)', 'success');
-        this.displayOutput('Ping: <1ms (localhost)', 'success');
-        this.displayOutput('Tickrate: 128 (thoughts per second)', 'info');
-        this.displayOutput('Uptime: ' + Math.floor((Date.now() - this.startTime) / 1000) + 's', 'info');
-        this.displayOutput('Anti-cheat: Secured by good vibes', 'success');
+        this.displayOutput('[console] Portfolio Server Status:', 'console');
+        this.displayOutput('[console] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'console');
+        this.displayOutput('[console] Server: William\'s Portfolio v1.0.0', 'console');
+        this.displayOutput('[console] Map: portfolio_terminal', 'console');
+        this.displayOutput('[console] Players: 1/1 (you)', 'console');
+        this.displayOutput('[steamnetsockets] Ping: <1ms (localhost)', 'steamnetsockets');
+        this.displayOutput('[console] Tickrate: 128 (thoughts per second)', 'console');
+        this.displayOutput('[console] Uptime: ' + Math.floor((Date.now() - this.startTime) / 1000) + 's', 'console');
+        this.displayOutput('[console] Anti-cheat: Secured by good vibes', 'console');
     }
     
     quit() {
@@ -657,6 +654,12 @@ class PortfolioConsole {
             this.displayOutput('Auto-reconnecting to portfolio server...', 'info');
             this.displayOutput('Connection established. Welcome back!', 'success');
         }, 3000);
+    }
+}
+
+function closeConsole() {
+    if (confirm('Are you sure you want to close the console?')) {
+        document.body.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100vh; background: #222222; color: #fff; font-family: Source Code Pro, monospace;"><div style="text-align: center;"><h1>CONSOLE CLOSED</h1><p>Thanks for visiting William Xu\'s portfolio!</p><p><a href="javascript:location.reload()" style="color: #00bfff;">Click here to reopen</a></p></div></div>';
     }
 }
 
