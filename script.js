@@ -532,7 +532,7 @@ class PortfolioConsole {
     }
     
     showVersion() {
-        this.displayOutput('William Xu Portfolio Console v2.0.0', 'success');
+        this.displayOutput('William Xu Portfolio Console v1.0.1', 'success');
     }
     
     openGithub() {
