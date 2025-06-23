@@ -532,7 +532,7 @@ class PortfolioConsole {
     }
     
     showVersion() {
-        this.displayOutput('William Xu Portfolio Console v1.0.1', 'success');
+        this.displayOutput('William Xu Portfolio Console v1.1.1', 'success');
     }
     
     openGithub() {
@@ -648,7 +648,7 @@ class PortfolioConsole {
     serverStatus() {
         this.displayOutput('[console] Portfolio Server Status:', 'console');
         this.displayOutput('[console] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'console');
-        this.displayOutput('[console] Server: William\'s Portfolio v2.0.0', 'console');
+        this.displayOutput('[console] Server: William\'s Portfolio v1.1.1', 'console');
         this.displayOutput('[console] Map: portfolio_terminal', 'console');
         this.displayOutput('[console] Players: 1/1 (you)', 'console');
         this.displayOutput('[steamnetsockets] Ping: <1ms (localhost)', 'steamnetsockets');
