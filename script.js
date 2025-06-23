@@ -341,30 +341,34 @@ class PortfolioConsole {
     showProjects() {
         const projectsText = `
             <div class="project-item">
-                <div class="project-title">🤖 BlueREV Underwater Robot</div>
-                <div class="project-description">
-                    Developed sonar suite and SLAM-based localization system for autonomous underwater vehicle.
-                    Improved navigation accuracy and deployment success through advanced sensor integration.
-                </div>
-                <div class="project-tech">Tech: ROS2, C++, Python, Docker, SLAM</div>
-            </div>
-            
-            <div class="project-item">
                 <div class="project-title">💰 EV Bettor</div>
                 <div class="project-description">
-                    Automated sports betting system with odds scraping and probability analysis.
-                    Data-driven approach to identify value bets using statistical modeling.
+                    Architected a high-throughput Selenium bot to identify and place +EV sports bets autonomously across multiple online sportsbooks.
+                    Created real-time arbitrage and risk analysis engine using SciPy and SQL-based data lakes.
+                    Achieved consistent 15% ROI through intelligent bankroll management and probabilistic modeling.
                 </div>
-                <div class="project-tech">Tech: Python, Selenium, MySQL, Web Scraping</div>
+                <div class="project-tech">Tech: Python, Selenium, MySQL, SciPy</div>
             </div>
             
             <div class="project-item">
-                <div class="project-title">🔬 NSF Research Projects</div>
+                <div class="project-title">🎵 SoundCard</div>
                 <div class="project-description">
-                    Underwater robotics research focusing on autonomous navigation and environmental mapping.
-                    Contributing to advancing autonomous underwater vehicle capabilities.
+                    Developed a full-stack AI-powered web application that generates personalized Pokémon-style trading cards from Spotify listening data.
+                    Reached 500+ total users within the first three months with secure OAuth authentication and multi-timeframe music analytics.
+                    Designed scalable backend infrastructure with PostgreSQL, Prisma ORM, and AWS S3 integration.
                 </div>
-                <div class="project-tech">Tech: Research, Robotics, Data Analysis</div>
+                <div class="project-tech">Tech: Next.js, TypeScript, PostgreSQL, AWS, Spotify API, Replicate API, Prisma</div>
+                <div class="project-link"><a href="https://spotify-avatar-ten.vercel.app/" target="_blank">🔗 View Project</a></div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-title">🤖 BlueREV Underwater Robot</div>
+                <div class="project-description">
+                    Engineered a Gaussian Process Regression-based SLAM algorithm in ROS2 to fuse sonar and IMU sensor data.
+                    Improved localization accuracy by 200% over traditional odometry in underwater culvert navigation.
+                    Constructed modular sensor fusion pipeline handling noisy underwater sonar and IMU data.
+                </div>
+                <div class="project-tech">Tech: ROS2, C++, Python, Docker, SLAM, Gaussian Process Regression</div>
             </div>
         `;
         this.displayOutput(projectsText);
@@ -374,27 +378,27 @@ class PortfolioConsole {
         const skillsText = `
             <div class="skill-category">
                 <div class="skill-category-title">Programming Languages:</div>
-                <div class="skill-list">Python, Java, C++, TypeScript, JavaScript</div>
+                <div class="skill-list">Python, C++, Java, C, SQL (PostgreSQL, MySQL), MongoDB (NoSQL), R, TypeScript, JavaScript, HTML/CSS, Assembly, Verilog</div>
             </div>
             
             <div class="skill-category">
                 <div class="skill-category-title">Frameworks & Libraries:</div>
-                <div class="skill-list">ROS2, React, TensorFlow, PyTorch</div>
+                <div class="skill-list">ROS2, React, Next.js, Node.js, Flask, Django, TensorFlow, PyTorch, Keras, HuggingFace, scikit-learn, NumPy, pandas, SciPy, Matplotlib, seaborn, OpenCV, NLTK, Prisma, Material-UI, Tailwind CSS, Discord.js, Puppeteer, Cheerio, Framer Motion, AWS SDK</div>
             </div>
             
             <div class="skill-category">
-                <div class="skill-category-title">Tools & Technologies:</div>
-                <div class="skill-list">Docker, Git, AWS, Linux, MySQL</div>
+                <div class="skill-category-title">Developer Tools:</div>
+                <div class="skill-list">Git, Docker, AWS (S3, CloudWatch), Vercel, Jenkins, Foxglove Studio, VS Code, Linux, CLI, REST APIs, Jupyter Notebook, Chrome DevTools, Figma, NextAuth.js, Replicate API, Spotify Web API, Prisma Studio, Turbopack, OAuth 2.0</div>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-category-title">Methodologies:</div>
+                <div class="skill-list">Agile (Scrum, Kanban), DevOps, Test-Driven Development (TDD), CI/CD, Hardware-in-the-Loop (HIL) Testing, Git Flow, API Integration, Prompt Engineering</div>
             </div>
             
             <div class="skill-category">
                 <div class="skill-category-title">Specializations:</div>
-                <div class="skill-list">Robotics, Embedded Systems, SLAM, Machine Learning</div>
-            </div>
-            
-            <div class="skill-category">
-                <div class="skill-category-title">Other:</div>
-                <div class="skill-list">Web Scraping, Reverse Engineering, Low-level Debugging</div>
+                <div class="skill-list">Robotics, Embedded Systems, SLAM, Machine Learning, Underwater Robotics, Neural Networks, Computer Vision, Web Scraping, Reverse Engineering, Low-level Debugging</div>
             </div>
         `;
         this.displayOutput(skillsText, 'info');
@@ -402,37 +406,48 @@ class PortfolioConsole {
     
     showExperience() {
         const experienceText = `
-            <strong>🔬 Underwater Robotics Researcher</strong><br>
-            • Developing autonomous navigation systems for underwater vehicles<br>
-            • Implementing SLAM algorithms for real-time mapping<br>
-            • Working with ROS2 and advanced sensor integration<br><br>
+            <strong>💻 AI Hardware Design Intern</strong> | Nano IC, Milpitas, CA<br>
+            <em>June 2025 - Present | SystemVerilog, Python, Verilator, Git, Assembly</em><br>
+            • Contributing to the development of a hypercube-based neural network processor featuring 65K+ nodes and a custom 100+ instruction RISC ISA<br>
+            • Involved in hardware simulation (Verilator), neural assembly development, and Python-based functional verification<br><br>
             
-            <strong>📚 NSF Research Intern</strong><br>
-            • Contributing to National Science Foundation research projects<br>
-            • Focus on robotics and autonomous systems<br>
-            • Data analysis and system optimization<br><br>
+            <strong>🔬 Undergraduate Researcher</strong> | Texas A&M University<br>
+            <em>December 2023 - Present | Python, C++, ROS2, Docker, Git</em><br>
+            • Engineered a Gaussian Process Regression-based SLAM algorithm in ROS2 to fuse sonar and IMU sensor data<br>
+            • Improved localization accuracy by 200% over traditional odometry in underwater culvert navigation<br>
+            • Resolved real-time synchronization issues between Jetson and Arduino platforms<br>
+            • Enhanced system reliability by 40% during autonomous operations<br><br>
             
-            <strong>👨‍🏫 Peer Tutor</strong><br>
-            • Teaching Python programming and problem-solving techniques<br>
-            • Helping students with debugging and code optimization<br>
-            • Mentoring in software development best practices
+            <strong>📚 Research Intern</strong> | National Science Foundation<br>
+            <em>May 2024 - August 2024 | Python, C++, ROS2, Docker, Git, Foxglove</em><br>
+            • Directed field testing and hardware-in-the-loop automation of BlueROV2<br>
+            • Enhanced autonomous entry success rate into flooded culverts by 25%<br>
+            • Implemented sonar-based reactive control system with real-time obstacle detection<br>
+            • Developed GitLab CI/CD pipelines to automate continuous integration<br><br>
+            
+            <strong>👨‍🏫 ENGR 102 Peer Tutor</strong> | Texas A&M University<br>
+            <em>August 2023 - May 2024 | Python</em><br>
+            • Led interactive Python programming tutorials for 100+ students<br>
+            • Achieved 15% average improvement in student grades and 25% increase in confidence<br>
+            • Provided detailed feedback on 200+ code submissions
         `;
         this.displayOutput(experienceText, 'info');
     }
     
     showEducation() {
         const educationText = `
-            <strong>🎓 Texas A&M University</strong><br>
-            Computer Engineering - Rising Senior<br>
-            Focus: Robotics, Embedded Systems, and Machine Learning<br><br>
+            <strong>🎓 Texas A&M University</strong> | College Station, TX<br>
+            Computer Engineering B.S | GPA: 3.57 | Expected May 2026<br><br>
             
             <strong>📖 Relevant Coursework:</strong><br>
+            • Computer Architecture & Computer Systems<br>
             • Data Structures & Algorithms<br>
-            • Computer Architecture<br>
-            • Embedded Systems Design<br>
-            • Machine Learning<br>
-            • Robotics & Automation<br>
-            • Signal Processing
+            • Digital Integrated Circuit Design & Digital System Design<br>
+            • Electrical Circuit Theory & Electronics<br>
+            • Software Engineering & OOP<br>
+            • Microprocessor Systems Design<br>
+            • Signals and Systems<br>
+            • Databases
         `;
         this.displayOutput(educationText, 'info');
     }
@@ -443,13 +458,19 @@ class PortfolioConsole {
                 <span class="contact-label">Email:</span> williamsxuu@gmail.com
             </div>
             <div class="contact-item">
+                <span class="contact-label">Phone:</span> (530) 760-6746
+            </div>
+            <div class="contact-item">
                 <span class="contact-label">GitHub:</span> github.com/will-iamxu
             </div>
             <div class="contact-item">
-                <span class="contact-label">LinkedIn:</span> Available on GitHub profile
+                <span class="contact-label">LinkedIn:</span> www.linkedin.com/in/william-xuuu
             </div>
             <div class="contact-item">
-                <span class="contact-label">Location:</span> Texas, USA
+                <span class="contact-label">Portfolio:</span> willxu.xyz
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Location:</span> Davis, CA
             </div>
             <br>
             <em>Feel free to reach out for collaborations, opportunities, or just to chat about tech!</em>
@@ -511,7 +532,7 @@ class PortfolioConsole {
     }
     
     showVersion() {
-        this.displayOutput('William Xu Portfolio Console v1.0.0', 'success');
+        this.displayOutput('William Xu Portfolio Console v2.0.0', 'success');
     }
     
     openGithub() {
@@ -627,7 +648,7 @@ class PortfolioConsole {
     serverStatus() {
         this.displayOutput('[console] Portfolio Server Status:', 'console');
         this.displayOutput('[console] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'console');
-        this.displayOutput('[console] Server: William\'s Portfolio v1.0.0', 'console');
+        this.displayOutput('[console] Server: William\'s Portfolio v2.0.0', 'console');
         this.displayOutput('[console] Map: portfolio_terminal', 'console');
         this.displayOutput('[console] Players: 1/1 (you)', 'console');
         this.displayOutput('[steamnetsockets] Ping: <1ms (localhost)', 'steamnetsockets');
