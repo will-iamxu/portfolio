@@ -406,10 +406,6 @@ class PortfolioConsole {
     
     showExperience() {
         const experienceText = `
-            <strong>💻 AI Hardware Design Intern</strong> | Nano IC, Milpitas, CA<br>
-            <em>June 2025 - Present | SystemVerilog, Python, Verilator, Git, Assembly</em><br>
-            • Contributing to the development of a hypercube-based neural network processor featuring 65K+ nodes and a custom 100+ instruction RISC ISA<br>
-            • Involved in hardware simulation (Verilator), neural assembly development, and Python-based functional verification<br><br>
             
             <strong>🔬 Undergraduate Researcher</strong> | Texas A&M University<br>
             <em>December 2023 - Present | Python, C++, ROS2, Docker, Git</em><br>
