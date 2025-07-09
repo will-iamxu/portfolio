@@ -528,7 +528,7 @@ class PortfolioConsole {
     }
     
     showVersion() {
-        this.displayOutput('William Xu Portfolio Console v1.2.1', 'success');
+        this.displayOutput('William Xu Portfolio Console v1.1.1', 'success');
     }
     
     openGithub() {
@@ -537,8 +537,7 @@ class PortfolioConsole {
     }
     
     openLinkedin() {
-        window.open('https://www.linkedin.com/in/william-xuuu', '_blank');
-        this.displaySuccess('Opening LinkedIn profile...');
+        this.displayInfo('LinkedIn profile available on GitHub profile');
     }
     
     showResume() {
@@ -645,7 +644,7 @@ class PortfolioConsole {
     serverStatus() {
         this.displayOutput('[console] Portfolio Server Status:', 'console');
         this.displayOutput('[console] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'console');
-        this.displayOutput('[console] Server: William\'s Portfolio v1.2.1', 'console');
+        this.displayOutput('[console] Server: William\'s Portfolio v1.1.1', 'console');
         this.displayOutput('[console] Map: portfolio_terminal', 'console');
         this.displayOutput('[console] Players: 1/1 (you)', 'console');
         this.displayOutput('[steamnetsockets] Ping: <1ms (localhost)', 'steamnetsockets');
