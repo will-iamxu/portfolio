@@ -407,25 +407,33 @@ class PortfolioConsole {
     showExperience() {
         const experienceText = `
             
+            <strong>💻 R&D Intern</strong> | Nano IC<br>
+            <em>June 2025 - September 2025 | SystemVerilog, Python, Verilator, Git, Assembly</em><br>
+            • Developed Python simulation framework for distributed neural network architecture<br>
+            • Implemented packet routing algorithms and BF16 arithmetic operations to validate hardware designs<br>
+            • Created C++ behavioral models for CORDIC arithmetic units and floating-point processors<br>
+            • Achieved 100x faster design validation compared to RTL simulation<br><br>
+            
+            <strong>🎮 R&D Contractor</strong> | Roblox<br>
+            <em>May 2025 - August 2025 | Go, Python, Kubernetes, gRPC, Git</em><br>
+            • Collaborated with distributed systems engineering team to optimize game server workloads<br>
+            • Developed high-performance distributed processing framework for large-scale infrastructure<br>
+            • Implemented service orchestration mechanisms using gRPC and Kubernetes<br>
+            • Enabled efficient scaling and fault-tolerant execution of real-time game sessions<br><br>
+            
             <strong>🔬 Undergraduate Researcher</strong> | Texas A&M University<br>
             <em>December 2023 - Present | Python, C++, ROS2, Docker, Git</em><br>
-            • Engineered a Gaussian Process Regression-based SLAM algorithm in ROS2 to fuse sonar and IMU sensor data<br>
-            • Improved localization accuracy by 200% over traditional odometry in underwater culvert navigation<br>
-            • Resolved real-time synchronization issues between Jetson and Arduino platforms<br>
-            • Enhanced system reliability by 40% during autonomous operations<br><br>
+            • Developed SLAM algorithm using Gaussian Process regression for sonar/IMU sensor fusion<br>
+            • Improved underwater robot localization accuracy by 30% in low-visibility environments<br>
+            • Built modular sensor fusion pipeline with Kalman filtering for processing noisy sonar data<br>
+            • Enabled real-time localization at 20Hz update rates for underwater robotics applications<br><br>
             
-            <strong>📚 Research Intern</strong> | National Science Foundation<br>
+            <strong>📚 REU Research Intern</strong> | NSF & Texas A&M University<br>
             <em>May 2024 - August 2024 | Python, C++, ROS2, Docker, Git, Foxglove</em><br>
-            • Directed field testing and hardware-in-the-loop automation of BlueROV2<br>
-            • Enhanced autonomous entry success rate into flooded culverts by 25%<br>
-            • Implemented sonar-based reactive control system with real-time obstacle detection<br>
-            • Developed GitLab CI/CD pipelines to automate continuous integration<br><br>
-            
-            <strong>👨‍🏫 ENGR 102 Peer Tutor</strong> | Texas A&M University<br>
-            <em>August 2023 - May 2024 | Python</em><br>
-            • Led interactive Python programming tutorials for 100+ students<br>
-            • Achieved 15% average improvement in student grades and 25% increase in confidence<br>
-            • Provided detailed feedback on 200+ code submissions
+            • Led field testing of BlueROV2 autonomous underwater vehicle across 15+ scenarios<br>
+            • Improved navigation success rate by 25% in confined spaces through enhanced sonar perception<br>
+            • Implemented GitLab CI/CD pipelines with automated testing frameworks<br>
+            • Accelerated development cycles by 25% while ensuring code quality<br><br>
         `;
         this.displayOutput(experienceText, 'info');
     }
